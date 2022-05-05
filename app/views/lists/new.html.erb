@@ -2,7 +2,5 @@
 
 <%= simple_form_for @list do |f| %>
   <%= f.input :name, placeholder: 'Name your list' %>
-  <%# <%= f.association :movies, collection: @movies %>
-  <%# <%= f.association :movies %>
-  <%= f.button :submit %>
+  <%= f.submit "Create a list", class: "btn btn-flat" %>
 <% end %>
