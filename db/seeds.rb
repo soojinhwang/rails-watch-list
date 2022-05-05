@@ -35,13 +35,13 @@
 # puts "Finished!"
 
 puts 'Cleaning database...'
+Bookmark.destroy_all
+List.destroy_all
 Movie.destroy_all
 
 puts 'Creating movies...'
-
 movies_serialized = URI.open('https://tmdb.lewagon.com/movie/top_rated').read
 json = JSON.parse(movies_serialized)
-
 json['results'].each do |entry|
   movie = Movie.create!(
     title: entry['title'],
@@ -51,5 +51,19 @@ json['results'].each do |entry|
   )
   puts "Created #{movie.title}"
 end
+puts 'Finished!'
 
+puts 'Creating lists...'
+anime_pic = URI.open('https://res.cloudinary.com/soojinhwang/image/upload/v1651776289/iqegaspjpxvpjg1oaqyi.jpg')
+favourites_pic = URI.open('https://res.cloudinary.com/soojinhwang/image/upload/v1651776278/gwbg4gyeiml4gkcvwchh.jpg')
+
+anime = List.new(name: 'Anime')
+anime.photo.attach(io: anime_pic, filename: 'totoro.jpg', content_type: 'image/jpg')
+anime.save!
+puts "Created #{anime.name}"
+
+my_favourites = List.new(name: 'My favourites')
+my_favourites.photo.attach(io: favourites_pic, filename: 'parasite.jpg', content_type: 'image/jpg')
+my_favourites.save!
+puts "Created #{my_favourites.name}"
 puts 'Finished!'
