@@ -1,4 +1,9 @@
-<h1><%= @list.name %></h1>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.photo.key %>');">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
 
 <% @list.movies.each do |movie| %>
   <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
@@ -9,3 +14,4 @@
 
 <p><%= link_to "Back to lists", lists_path %></p>
 <p><%= link_to "Create new bookmark", new_list_bookmark_path(@list) %></p>
+<p><%= link_to "Delete this list", list_path(@list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" } %></p>

@@ -2,5 +2,6 @@
 
 <%= simple_form_for @list do |f| %>
   <%= f.input :name, placeholder: 'Name your list' %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Create a list", class: "btn btn-flat" %>
 <% end %>

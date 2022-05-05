@@ -1,7 +1,9 @@
 <h1>My Lists</h1>
-<ul>
+<ul style="list-style: none;">
   <li>
     <% @lists.each do |list| %>
+      <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
       <p><%= link_to list.name, list_path(list) %></p>
     <% end %>
   </li>
+</ul>
