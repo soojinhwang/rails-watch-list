@@ -1,9 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80);">
+  <h1><strong>My Movies List</strong></h1>
+  <h5>Save any kind of movies<h5>
+  <p><%= link_to "Create a new list", new_list_path, :class => "btn-purple" %></p>
+</div>
+
 <h1>My Lists</h1>
 <ul style="list-style: none;">
   <li>
     <% @lists.each do |list| %>
       <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-      <p><%= link_to list.name, list_path(list) %></p>
+      <%= link_to list.name, list_path(list) %>
     <% end %>
   </li>
 </ul>

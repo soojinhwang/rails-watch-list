@@ -1,0 +1,26 @@
+.btn-purple-border {
+  color: $purple;
+  text-decoration: none;
+  padding: 8px 24px;
+  border: 1px solid $purple;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
+
+a.btn-purple-border:hover {
+  color: #a858b1;
+  border: 1px solid #a858b1;
+}
+
+.btn-purple {
+  color: $light-gray;
+  text-decoration: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $purple;
+}
+
+a.btn-purple:hover {
+  color: #c8c6c6;
+  background-color: #a858b1;
+}
