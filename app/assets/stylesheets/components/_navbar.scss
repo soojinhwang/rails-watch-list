@@ -1,19 +1,51 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: white;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
 $spacer: 8px;
 
-.navbar {
+.navbar-watch-list {
   background-color: white;
+  height: ($spacer * 10);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-watch-list-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: ($spacer * 2);
+
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
+
+  a:hover {
+    color: $medium-gray;
+  }
+
+  p {
+    margin-bottom: 0;
+    margin-left: ($spacer * 1);
+  }
+}
+
+.navbar-watch-list-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: ($spacer * 2);
+
+  p {
+    margin-bottom: 0;
+    margin-right: ($spacer * 2);
+  }
+}
+
+a.my-lists {
+  text-decoration: none;
+  color: $gray;
+
+  &:hover {
+    color: $medium-gray;
+  }
 }

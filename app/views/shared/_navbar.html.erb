@@ -1,10 +1,12 @@
-<nav class="navbar">
-  <div class="navbar-left">
-    <p>Watch List</p>
-    <i class="fa-solid fa-clapperboard"></i>
+<nav class="navbar-watch-list">
+  <div class="navbar-watch-list-left">
+    <%= link_to root_path, class: "navbar-logo" do %>
+      <i class="fa-solid fa-clapperboard"></i>
+      <p><%= link_to "Watch List", root_path %></p>
+    <% end %>
   </div>
-  <div class="navbar-right">
-    <%= link_to "My Lists", lists_path %>
-    <%= link_to "New List", new_list_path, :class => "btn btn-outline-success" %>
+  <div class="navbar-watch-list-right">
+    <p><%= link_to "My Lists", lists_path, :class  => "my-lists" %></p>
+    <%= link_to "+ New List", new_list_path, :class => "btn btn-outline-success" %>
   </div>
 </nav>
