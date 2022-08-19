@@ -5,19 +5,20 @@
 </div>
 
 <div class="container text-center">
-  <h1>My Movie Lists</h1>
-  <div class="one">
+  <h1 class="pt-3">Choose a List</h1>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     <% @lists.each do |list| %>
-      <div class="two">
+      <div class="p-3">
         <%= link_to list_path(list) do %>
           <% if list.photo.attached? %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+            <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
              url('<%= cl_image_path list.photo.key, height: 300, width: 400, crop: :fill, gravity: :auto %>')">
               <h3><%= list.name %></h3>
             </div>
           <% else %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-             url(https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80)">
+            <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+             url(https://images.unsplash.com/photo-1543536448-1e76fc2795bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1139&q=80)">
               <h3><%= list.name %></h3>
             </div>
           <% end %>

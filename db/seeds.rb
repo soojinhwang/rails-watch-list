@@ -51,11 +51,14 @@ json['results'].each do |entry|
   )
   puts "Created #{movie.title}"
 end
-puts 'Finished!'
+puts 'Finished creating movies!'
+
+####################################
 
 puts 'Creating lists...'
 anime_pic = URI.open('https://res.cloudinary.com/soojinhwang/image/upload/v1651776289/iqegaspjpxvpjg1oaqyi.jpg')
 favourites_pic = URI.open('https://res.cloudinary.com/soojinhwang/image/upload/v1651776278/gwbg4gyeiml4gkcvwchh.jpg')
+classics_pic = URI.open('https://res.cloudinary.com/soojinhwang/image/upload/v1660931267/MV5BNTY1MzgzOTYxNV5BMl5BanBnXkFtZTgwMDI4OTEwMjE_._V1__crbfmy.jpg')
 
 anime = List.new(name: 'Anime')
 anime.photo.attach(io: anime_pic, filename: 'totoro.jpg', content_type: 'image/jpg')
@@ -66,4 +69,10 @@ my_favourites = List.new(name: 'My favourites')
 my_favourites.photo.attach(io: favourites_pic, filename: 'parasite.jpg', content_type: 'image/jpg')
 my_favourites.save!
 puts "Created #{my_favourites.name}"
-puts 'Finished!'
+
+classics = List.new(name: 'Classic movies')
+classics.photo.attach(io: classics_pic, filename: 'pulp_fiction.jpg', content_type: 'image/jpg')
+classics.save!
+puts "Created #{classics.name}"
+
+puts 'Finished creating lists!'

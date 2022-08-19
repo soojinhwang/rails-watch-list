@@ -2,11 +2,11 @@
   <div class="navbar-watch-list-left">
     <%= link_to root_path, class: "navbar-logo" do %>
       <i class="fa-solid fa-clapperboard"></i>
-      <p><%= link_to "Watch List", root_path %></p>
+      <h6><%= link_to "Watch List", root_path %></h6>
     <% end %>
   </div>
   <div class="navbar-watch-list-right">
     <p><%= link_to "My Lists", lists_path, :class  => "my-lists" %></p>
-    <%= link_to "+ List", new_list_path, :class => "btn-purple-border" %>
+    <p><%= link_to "+ New List", new_list_path, :class => "btn-purple-border" %></p>
   </div>
 </nav>

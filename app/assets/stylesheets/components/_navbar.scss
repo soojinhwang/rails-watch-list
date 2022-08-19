@@ -1,7 +1,7 @@
 $spacer: 8px;
 
 .navbar-watch-list {
-  background-color: #98526F;
+  background-color: $dusky-pink;
   height: ($spacer * 10);
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ $spacer: 8px;
     color: $medium-gray;
   }
 
-  p {
+  h6 {
     margin-bottom: 0;
     margin-left: ($spacer * 1);
   }
@@ -38,6 +38,7 @@ $spacer: 8px;
   p {
     margin-bottom: 0;
     margin-right: ($spacer * 2);
+    font-weight: 400;
   }
 }
 
