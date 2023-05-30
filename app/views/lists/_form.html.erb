@@ -1,0 +1,8 @@
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, placeholder: 'Name your list' %>
+  <%= f.input :photo, as: :file  %>
+  <div class="d-flex justify-content-center">
+    <%= f.button :submit, "Create list", class: "-purple" %>
+    <%= link_to "Cancel", root_path, class: "btn-gray" %>
+  </div>
+<% end %>

@@ -18,9 +18,25 @@ a.btn-purple-border:hover {
   padding: 8px 24px;
   border-radius: 4px;
   background: $purple;
+  margin: 4px;
 }
 
 a.btn-purple:hover {
   color: #c8c6c6;
   background-color: #bf5aca;
+}
+
+.btn-gray {
+  color: $light-gray;
+  background-color: $medium-gray;
+  text-decoration: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+  margin: 4px;
+}
+
+a.btn-gray:hover {
+  color: #9f9f9f;
+  background-color: #5f5f5f
 }
